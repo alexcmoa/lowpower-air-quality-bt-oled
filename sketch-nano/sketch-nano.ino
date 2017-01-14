@@ -1,5 +1,6 @@
 #include "U8glib.h"
 #include "dht.h"
+#include "LowPower.h"
 
 #define dht_apin A0
 
@@ -38,5 +39,7 @@ void loop(void) {
     draw();
   } while( u8g.nextPage() );
   
-  delay(5000);  // Delay of 5sec before accessing DHT11 (min - 2sec)
+ // delay(5000);  // Delay of 5sec before accessing DHT11 (min - 2sec)
+  
+  LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
 }
