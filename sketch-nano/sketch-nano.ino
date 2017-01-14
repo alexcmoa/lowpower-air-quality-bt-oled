@@ -5,7 +5,8 @@
 
 dht DHT;
 
-U8GLIB_SH1106_128X64 u8g(13, 11, 10, 9, 8);  // D0=13, D1=11, CS=10, DC=9, Reset=8
+//U8GLIB_SH1106_128X64 u8g(13, 11, 10, 9, 8);  // D0=13, D1=11, CS=10, DC=9, Reset=8
+U8GLIB_SH1106_128X64 u8g(10, 9, 12, 11, 13);  // D0=SCK=10, D1=SDA=9, CS=12, DC=11, Reset=RES=13
 
 void draw(void) {
 //  u8g.drawBitmapP( 76, 5, 6, 50, brainy_bitmap);  // put bitmap
